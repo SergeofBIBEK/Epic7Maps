@@ -1,6 +1,19 @@
-<h1>Raid Path Planner</h1>
-<info-box></info-box>
-<input-form></input-form>
-<map-container></map-container>
-<map-cell></map-cell>
-<message-box></message-box>
+<mat-toolbar color="primary">
+  <span>Raid Path Planner</span>
+  <span class="fillSpace"></span>
+  <info-box></info-box>
+</mat-toolbar>
+
+<mat-grid-list cols="10" rowHeight="fit">
+  <mat-grid-tile [colspan]="10" [rowspan]="1">
+    <message-box></message-box>
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="8" [rowspan]="8">
+    <map-container></map-container>
+  </mat-grid-tile>
+
+  <mat-grid-tile [colspan]="2" [rowspan]="8">
+    <input-form></input-form>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,3 +1,7 @@
-<p>
-  map-container works!
-</p>
+<div class="scrollContainer">
+  <mat-grid-list [cols]="service.numColumns$ | async" gutterSize="0px">
+    <mat-grid-tile *ngFor="let cell of (service.mapCells$ | async)" [colspan]="1" [rowspan]="1">
+      <map-cell [cell]="cell"></map-cell>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

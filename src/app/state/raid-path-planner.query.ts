@@ -1,10 +1,21 @@
-import { Query } from "@datorama/akita";
-import { RaidPathPlannerStore, RaidPathPlannerState, raidPathPlannerStore } from "./raid-path-planner.store";
+import { Query, QueryConfig } from "@datorama/akita";
+import { RaidPathPlannerStore, RaidPathPlannerState } from "./raid-path-planner.store";
 
+@QueryConfig({})
 export class RaidPathPlannerQuery extends Query<RaidPathPlannerState> {
   constructor(protected store: RaidPathPlannerStore) {
     super(store);
   }
-}
 
-export const raidPathPlannerQuery = new RaidPathPlannerQuery(raidPathPlannerStore);
+  get numColumns$() {
+    return this.select(state => {
+      return state.stage.map[0].length;
+    });
+  }
+
+  get mapCells$() {
+    return this.select(state => {
+      return state.stage.map.flat();
+    });
+  }
+}

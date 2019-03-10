@@ -1,0 +1,11 @@
+:host {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  overflow: auto;
+
+  mat-grid-list {
+    height: 100%;
+  }
+}

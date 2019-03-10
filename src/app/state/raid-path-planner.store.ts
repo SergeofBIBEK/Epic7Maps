@@ -1,12 +1,17 @@
 import { Store, StoreConfig } from "@datorama/akita";
+import { azmakalisMap } from "../maps/azmakalis";
 
 export interface RaidPathPlannerState {
   key: string;
+  stage: any;
+  inputMode: number;
 }
 
 export function createInitialState(): RaidPathPlannerState {
   return {
-    key: ""
+    key: "",
+    stage: azmakalisMap,
+    inputMode: 0
   };
 }
 
@@ -16,5 +21,3 @@ export class RaidPathPlannerStore extends Store<RaidPathPlannerState> {
     super(createInitialState());
   }
 }
-
-export const raidPathPlannerStore = new RaidPathPlannerStore();

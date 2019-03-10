@@ -1,8 +1,16 @@
-export const azmakalisMap = [
-  //stuffs
-  [1, 0, 0, 0, 1],
-  [1, 1, 1, 1, 1],
-  [0, 1, 2, 1, 0],
-  [1, 1, 0, 3, 0],
-  [0, 4, 1, 1, 0]
-];
+const walkable = true,
+  encounter = true,
+  miniboss = true,
+  boss = true,
+  starting = true;
+
+export const azmakalisMap = {
+  startingStamina: 70,
+  map: [
+    [{ walkable }, {}, {}, {}, { walkable, starting }],
+    [{ walkable }, { walkable, encounter }, { walkable }, { walkable }, { walkable }],
+    [{ walkable }, {}, {}, { walkable }, {}],
+    [{ walkable }, {}, {}, { walkable, encounter, miniboss }, {}],
+    [{ walkable, encounter, boss }, { walkable }, { walkable }, { walkable }, {}]
+  ]
+};

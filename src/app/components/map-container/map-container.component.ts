@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
+import { RaidPathPlannerService } from "src/app/state";
 
 @Component({
   selector: "map-container",
@@ -7,7 +8,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MapContainerComponent implements OnInit {
-  constructor() {}
+  constructor(private service: RaidPathPlannerService) {}
 
   ngOnInit() {}
 }

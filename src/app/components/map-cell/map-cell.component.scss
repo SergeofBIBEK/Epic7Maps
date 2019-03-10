@@ -1,0 +1,33 @@
+:host {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+
+  .cell {
+    height: 100%;
+    width: 100%;
+    background-color: #d8d8d8;
+
+    &.walkable {
+      background-color: white;
+      border: 1px solid black;
+      box-sizing: border-box;
+    }
+
+    &.encounter {
+      background-color: #5b9bd5;
+    }
+
+    &.miniboss {
+      background-color: #ffc000;
+    }
+
+    &.boss {
+      background-color: red;
+    }
+
+    &.starting {
+      background-color: #70ad47;
+    }
+  }
+}

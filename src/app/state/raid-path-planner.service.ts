@@ -1,8 +1,17 @@
 import { ID } from "@datorama/akita";
-import { RaidPathPlannerStore, raidPathPlannerStore } from "./raid-path-planner.store";
+import { RaidPathPlannerStore } from "./raid-path-planner.store";
+import { RaidPathPlannerQuery } from "./raid-path-planner.query";
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class RaidPathPlannerService {
-  constructor(private raidPathPlannerStore: RaidPathPlannerStore) {}
-}
+  constructor(private store: RaidPathPlannerStore, private query: RaidPathPlannerQuery) {}
 
-export const raidPathPlannerService = new RaidPathPlannerService(raidPathPlannerStore);
+  get numColumns$() {
+    return this.query.numColumns$;
+  }
+
+  get mapCells$() {
+    return this.query.mapCells$;
+  }
+}
