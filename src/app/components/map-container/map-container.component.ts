@@ -8,7 +8,7 @@ import { RaidPathPlannerService } from "src/app/state";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MapContainerComponent implements OnInit {
-  constructor(private service: RaidPathPlannerService) {}
+  constructor(public service: RaidPathPlannerService) {}
 
   ngOnInit() {}
 }
