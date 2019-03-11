@@ -11,7 +11,5 @@ export class MapCellComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-    console.log(this.cell);
-  }
+  ngOnInit() {}
 }

@@ -2,20 +2,26 @@ import { Store, StoreConfig } from "@datorama/akita";
 import { azmakalisMap } from "../maps/azmakalis";
 
 export interface RaidPathPlannerState {
-  key: string;
   stage: any;
   inputMode: number;
+  currentPosition: any;
+  destination: any;
+  zoom: number;
+  campMorale: number;
 }
 
 export function createInitialState(): RaidPathPlannerState {
   return {
-    key: "",
     stage: azmakalisMap,
-    inputMode: 0
+    inputMode: 0,
+    currentPosition: {},
+    destination: {},
+    zoom: 0,
+    campMorale: 0
   };
 }
 
-@StoreConfig({ name: "raid-path-planner" })
+@StoreConfig({ name: "raidPathPlanner" })
 export class RaidPathPlannerStore extends Store<RaidPathPlannerState> {
   constructor() {
     super(createInitialState());

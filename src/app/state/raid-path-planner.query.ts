@@ -18,4 +18,27 @@ export class RaidPathPlannerQuery extends Query<RaidPathPlannerState> {
       return state.stage.map.flat();
     });
   }
+
+  get message$() {
+    return this.select(state => {
+      let { inputMode } = state;
+      let message = "";
+
+      switch (inputMode) {
+        case 0:
+          message = "";
+          break;
+
+        case 1:
+          message = "Click this thing.";
+          break;
+
+        default:
+          message = "";
+          break;
+      }
+
+      return message;
+    });
+  }
 }
