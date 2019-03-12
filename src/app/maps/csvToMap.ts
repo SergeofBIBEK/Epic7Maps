@@ -1,7 +1,7 @@
 export function csvToMap(csv: string) {
-  return csv.split("\n").map(row =>
-    row.split(",").map(cell => {
-      var final = { visited: false };
+  return csv.split("\n").map((row, y) =>
+    row.split(",").map((cell, x) => {
+      var final = { visited: false, x, y };
       if (parseInt(cell)) {
         final["walkable"] = true;
       }

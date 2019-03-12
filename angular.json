@@ -42,9 +42,7 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss"],
             "scripts": [],
-            "es5BrowserSupport": true,
-            "baseHref": "https://SergeofBIBEK.github.io/Epic7Maps/",
-            "deployUrl": "https://SergeofBIBEK.github.io/Epic7Maps/"
+            "es5BrowserSupport": true
           },
           "configurations": {
             "production": {
