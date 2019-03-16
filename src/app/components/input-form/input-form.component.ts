@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
+import { RaidPathPlannerService } from "src/app/state";
 
 @Component({
   selector: "input-form",
@@ -7,7 +8,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class InputFormComponent implements OnInit {
-  constructor() {}
+  constructor(private service: RaidPathPlannerService) {}
 
   ngOnInit() {}
 }

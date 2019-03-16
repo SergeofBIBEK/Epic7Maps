@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod && npx angular-cli-ghpages --dir=dist/RaidPathPlanner"
+    "deploy": "ng build --prod --base-href https://SergeofBIBEK.github.io/Epic7Maps/ && angular-cli-ghpages --dir=dist/RaidPathPlanner"
   },
   "private": true,
   "dependencies": {

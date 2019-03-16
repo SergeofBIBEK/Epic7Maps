@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input } from "@angular/core";
+import { RaidPathPlannerService } from "src/app/state";
 
 @Component({
   selector: "map-cell",
@@ -9,7 +10,7 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from "@angular/core
 export class MapCellComponent implements OnInit {
   @Input() cell;
 
-  constructor() {}
+  constructor(private service: RaidPathPlannerService) {}
 
   ngOnInit() {}
 }

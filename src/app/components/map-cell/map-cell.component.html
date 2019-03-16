@@ -1,1 +1,10 @@
-<div class="cell" [ngClass]="cell"></div>
+<div
+  class="cell"
+  [ngClass]="cell"
+  *ngIf="(service.currentPosition$ | async) as currentPosition"
+  (click)="service.addDestination(cell)"
+>
+  <mat-icon color="accent" *ngIf="currentPosition.x === cell.x && currentPosition.y === cell.y"
+    >my_location</mat-icon
+  >
+</div>

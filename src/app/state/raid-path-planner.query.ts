@@ -7,6 +7,14 @@ export class RaidPathPlannerQuery extends Query<RaidPathPlannerState> {
     super(store);
   }
 
+  get startingPosition() {
+    return this.getValue().stage.startingPoint;
+  }
+
+  get currentPosition$() {
+    return this.select(state => state.currentPosition);
+  }
+
   get numColumns$() {
     return this.select(state => {
       return state.stage.map[0].length;
@@ -17,6 +25,10 @@ export class RaidPathPlannerQuery extends Query<RaidPathPlannerState> {
     return this.select(state => {
       return state.stage.map.flat();
     });
+  }
+
+  get destinations$() {
+    return this.select(state => state.destinations);
   }
 
   get message$() {

@@ -5,7 +5,7 @@ export interface RaidPathPlannerState {
   stage: any;
   inputMode: number;
   currentPosition: any;
-  destination: any;
+  destinations: any;
   zoom: number;
   campMorale: number;
 }
@@ -15,7 +15,7 @@ export function createInitialState(): RaidPathPlannerState {
     stage: azmakalisMap,
     inputMode: 0,
     currentPosition: {},
-    destination: {},
+    destinations: [],
     zoom: 0,
     campMorale: 0
   };
